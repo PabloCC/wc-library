@@ -1,0 +1,70 @@
+:host {
+  display: block;
+  --btn-bg-color: #F2F3F4;
+  --btn-bg-shade-color: #EAEDED;
+  --btn-font-color: #000000;
+}
+
+:host([theme="primary"]) button {
+  --btn-bg-color: var(--primary-color);
+  --btn-bg-shade-color: var(--primary-shade-color);
+  --btn-font-color: var(--primary-contrast-color);
+}
+
+:host([theme="secondary"]) button {
+  --btn-bg-color: var(--secondary-color);
+  --btn-bg-shade-color: var(--secondary-shade-color);
+  --btn-font-color: var(--secondary-contrast-color);
+}
+
+:host([theme="success"]) button {
+  --btn-bg-color: var(--success-color);
+  --btn-bg-shade-color: var(--success-shade-color);
+  --btn-font-color: var(--success-contrast-color);
+}
+
+:host([theme="warning"]) button {
+  --btn-bg-color: var(--warning-color);
+  --btn-bg-shade-color: var(--warning-shade-color);
+  --btn-font-color: var(--warning-contrast-color);
+}
+
+:host([theme="danger"]) button {
+  --btn-bg-color: var(--danger-color);
+  --btn-bg-shade-color: var(--danger-shade-color);
+  --btn-font-color: var(--danger-contrast-color);
+}
+
+:host([theme="info"]) button {
+  --btn-bg-color: var(--info-color);
+  --btn-bg-shade-color: var(--info-shade-color);
+  --btn-font-color: var(--info-contrast-color);
+}
+
+:host([outline]) button {
+  background-color: transparent;
+  border: 2px solid var(--btn-bg-color);
+  color: var(--btn-bg-color)
+}
+
+:host([outline]) button:hover,
+:host([outline]) button:active {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-font-color);
+}
+
+button {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-font-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: background-color .2s;
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  background-color: var(--btn-bg-shade-color);
+}
