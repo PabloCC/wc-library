@@ -3,8 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    'main': './src/index.js',
-    'styles': './src/styles/main.css'
+    'crowned-main': './src/index.js',
+    'crowned-styles': './src/styles/main.css'
   },
   output: {
     filename: '[name].js',

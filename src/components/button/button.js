@@ -32,3 +32,5 @@ class Button extends BaseElement {
 }
 
 export default Button;
+
+customElements.define('button-element', Button);

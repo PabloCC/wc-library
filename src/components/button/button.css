@@ -62,6 +62,7 @@ button {
   box-sizing: border-box;
   transition: background-color .2s;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 button:hover,
