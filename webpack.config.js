@@ -3,8 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    'crowned-main': './src/index.js',
-    'crowned-styles': './src/styles/main.css'
+    'wc-main': './src/index.js',
+    'wc-styles': './src/styles/main.css'
   },
   output: {
     filename: '[name].js',
@@ -56,9 +56,10 @@ module.exports = {
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, ''),
     },
     compress: true,
-    port: 8000,
+    port: 8080,
+    https: false,
   }
 }

@@ -3,17 +3,20 @@ import { html } from 'lit';
 
 // More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Button',
+  title: 'Components/Select',
   args: {
-    label: 'Button'
+    label: 'Select'
   }
   // More on argTypes: https://storybook.js.org/docs/web-components/api/argtypes
 };
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 const Template = (args) => html`
-  <wc-button type="button" theme="${args.theme}">${args.label}</wc-button>
-  <wc-button type="button" theme="${args.theme}" outline>${args.label}</wc-button>
+  <wc-select theme="${args.theme}">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </wc-select>
 `;
 
 export const Primary = Template.bind({});

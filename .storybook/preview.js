@@ -1,4 +1,5 @@
-import '../dist/crowned-styles.css';
+import '../dist/wc-styles.css';
+import '../dist/wc-main.js';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

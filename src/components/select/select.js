@@ -1,11 +1,11 @@
-import { html } from 'lit';
+import {html} from 'lit';
 import BaseElement from '../base/base-element';
-import css from './button.css';
+import css from './select.css';
 
-class Button extends BaseElement {
+class Select extends BaseElement {
   constructor() {
     super();
-    this.type = 'button';
+    this.type = 'select';
   }
 
   static get styles() {
@@ -24,13 +24,13 @@ class Button extends BaseElement {
 
   render() {
     return html`
-      <button type="${this.type}">
+      <select type="${this.type}" disabled="${this.disabled}" theme="${this.theme}" size="${this.size}" outline="${this.outline}">
         <slot></slot>
-      </button>
+      </select>
     `;
   }
 }
 
-export default Button;
+export default Select;
 
-customElements.define('wc-button', Button);
+customElements.define('wc-select', Select);

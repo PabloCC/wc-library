@@ -24,6 +24,6 @@
   --info-contrast-color: #000000;
 }
 
-button-element {
+wc-button{
   margin: 10px;
 }

@@ -1,21 +1,20 @@
 import { html } from 'lit';
 import BaseElement from '../base/base-element';
-import css from './button.css';
+import css from './card.css';
 
-class Button extends BaseElement {
+class Card extends BaseElement {
   constructor() {
     super();
-    this.type = 'button';
+    this.type = 'card';
   }
 
   static get styles() {
     return this.processStyle(css);
   }
-
+  
   static get properties() {
     return {
       type: { type: String },
-      disabled: { type: Boolean },
       theme: { type: String, reflect: true },
       size: { type: String, reflect: true },
       outline: { type: Boolean, reflect: true },
@@ -24,13 +23,9 @@ class Button extends BaseElement {
 
   render() {
     return html`
-      <button type="${this.type}">
+      <div class="card card-${this.type}">
         <slot></slot>
-      </button>
+      </div>
     `;
   }
 }
-
-export default Button;
-
-customElements.define('wc-button', Button);

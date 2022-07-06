@@ -1,11 +1,14 @@
-import { html } from 'lit';
-import BaseElement from '../base/base-element';
-import css from './button.css';
+import { html } from 'lit'
+import BaseElement from "../base/base-element";
+import css from "./alert.css";
 
-class Button extends BaseElement {
+class Alert extends BaseElement {
   constructor() {
     super();
-    this.type = 'button';
+    this.type = "";
+    this.theme = "";
+    this.size = "";
+    this.outline = false;
   }
 
   static get styles() {
@@ -15,7 +18,6 @@ class Button extends BaseElement {
   static get properties() {
     return {
       type: { type: String },
-      disabled: { type: Boolean },
       theme: { type: String, reflect: true },
       size: { type: String, reflect: true },
       outline: { type: Boolean, reflect: true },
@@ -24,13 +26,13 @@ class Button extends BaseElement {
 
   render() {
     return html`
-      <button type="${this.type}">
+      <div class="alert alert-${this.type}">
         <slot></slot>
-      </button>
+      </div>
     `;
   }
 }
 
-export default Button;
+export default Alert;
 
-customElements.define('wc-button', Button);
+customElements.define("wc-alert", Alert);

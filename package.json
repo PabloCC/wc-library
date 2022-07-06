@@ -1,5 +1,5 @@
 {
-  "name": "crowned-library",
+  "name": "wc-library",
   "version": "1.0.0",
   "description": "Web components library",
   "private": true,
@@ -7,7 +7,7 @@
     "start": "webpack serve --mode=development --progress --color --open",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "webpack --mode=development && start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "author": "PabloCC",

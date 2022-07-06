@@ -1,11 +1,15 @@
 import { html } from 'lit';
-import BaseElement from '../base/base-element';
-import css from './button.css';
+import BaseElement from "../base/base-element";
+import css from "./input.css";
 
-class Button extends BaseElement {
+class Input extends BaseElement {
   constructor() {
     super();
-    this.type = 'button';
+    this.type = "text";
+    this.disabled = false;
+    this.theme = "";
+    this.size = "";
+    this.outline = false;
   }
 
   static get styles() {
@@ -24,13 +28,11 @@ class Button extends BaseElement {
 
   render() {
     return html`
-      <button type="${this.type}">
-        <slot></slot>
-      </button>
+      <input type="${this.type}" disabled="${this.disabled}" theme="${this.theme}" size="${this.size}" outline="${this.outline}">
     `;
   }
 }
 
-export default Button;
+export default Input;
 
-customElements.define('wc-button', Button);
+customElements.define("wc-input", Input);
